@@ -16,19 +16,19 @@
 
 **undo a commit, make it a topic branch**
 
-`git branch topic/wip
+`git branch topic/wip`
 
-git reset --hard HEAD~3
+`git reset --hard HEAD~3`
 
-git checkout topic/wip`
+`git checkout topic/wip`
 
 **undo a commit, make it a topic branch**
 
-`git branch topic/wip
+`git branch topic/wip`
 
-git reset --hard HEAD~3
+`git reset --hard HEAD~3`
 
-git checkout topic/wip`
+`git checkout topic/wip`
 
 **undo commit permanently**
 
@@ -44,41 +44,41 @@ git checkout topic/wip`
 
 **hotfix** in the middle of coding features
 
-`//doing codeing in feature1 branch with half cooked code
+`//doing codeing in feature1 branch with half cooked code`
 
-git commit -a -m "snapshot WIP"
+`git commit -a -m "snapshot WIP"`
 
-git checkout master
+`git checkout master`
 
-git checkout -b hotfix1
+`git checkout -b hotfix1`
 
-//fix bug here
+`//fix bug here`
 
-git commit -a -m "fix the bug"
+`git commit -a -m "fix the bug"`
 
-git checkout feature1
+`git checkout feature1`
 
-git reset --soft HEAD^
+`git reset --soft HEAD^`
 
-git reset`
+`git reset`
 
 **reset a single file**
 
-`git reset -- file1.txt
+`git reset -- file1.txt`
 
 **keep change in working tree while discarding some previous commits**
 
-`git tag start
+`git tag start`
 
-git checkout branch1
+`git checkout branch1'
 
-//edit + commit to branch 1
+`//edit + commit to branch 1`
 
-// continue to edit for branch 2, then you realize that branch2 should not depend on branch1
+`// continue to edit for branch 2, then you realize that branch2 should not depend on branch1`
 
-git checkout -b branch2
+`git checkout -b branch2`
 
-git reset --keep start`
+`git reset --keep start`
 
 **Create new commit that undoes all of the changes** made in , then apply it to the current branch.
 
@@ -88,11 +88,11 @@ git reset --keep start`
 
 **View history of one file**
 
-`git log -- file1.txt
+`git log -- file1.txt`
 
 **View log with filename status**
 
-`git log --name-status
+`git log --name-status`
 
 **Show log** of change in local directory
 
@@ -118,7 +118,31 @@ Show difference between staged changes and last commit
 
 `git diff --cached`
 
+## branch
 
+**Create new branch**
+
+`git branch <branch-name>`
+
+**Create new branch and switch to it**
+
+`git checkout -b [branch name]`
+
+**Delete local branch**
+
+`git branch -d <branch-name>`
+
+**Delete remote branch**
+
+`git push origin --delete <branch-name>`
+
+**Rename a branch**
+
+`git branch -m [old branch name] [new branch name]`
+
+**Merge a branch into target branch**
+
+`git merge [source branch] [target branch]`
 
 
 
